@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        html, body {
+            height: 100%;
+        }
+        body {
+            background-image: url('flower.png');
+            background-position: 100px 100px;
+            background-repeat: no-repeat;
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            console.log(document.body.style.backgroundPosition);
+            document.body.addEventListener('mousemove', function (event) {
+                console.log(document.body.style.backgroundPosition);
+                document.body.style.backgroundPosition = (event.clientX - 128) + 'px ' + (event.clientY - 128) + 'px';
+            });
+        });
+    </script>
+</head>
+<body>
+
+</body>
+</html>
