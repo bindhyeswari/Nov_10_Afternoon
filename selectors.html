@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="base.css"/>
+    <style>
+        /* selectors in CSS3 */
+        /* Attribute selectors */
+        /* Starting selector, ending selector and "any location" selector */
+        /* Note the multiple attribute selectors */
+        input[type='text'][placeholder^='blog'] {
+            color: red;
+        }
+        input[type='text'][placeholder$='title'] {
+            color: green;
+        }
+        input[type='text'][placeholder*='blog'] {
+            background-color: #eee;
+        }
+        ul {
+            list-style-type: none;
+        }
+        .li2 ~ li {
+            /* todo: Adjacent sibling selector vs the ~ General sibling selector */
+            background-color: red;
+        }
+
+    </style>
+</head>
+<body>
+<input type="text" placeholder="blog name"/>
+<input type="text" placeholder="post(blog) title"/>
+<input type="text" placeholder="blog post name"/>
+<ul>
+    <li>1</li>
+    <li class="li2">2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+    <li>6</li>
+    <a href="/somefile.pdf">Somefile.pdf</a>
+</ul>
+
+</body>
+</html>

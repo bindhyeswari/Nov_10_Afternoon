@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="base.css"/>0
+    <style>
+        p:nth-of-type(2) { /* vs nth-of-type */
+            background-color: red;
+        }
+        div {
+            padding: 0.15em;
+            margin: 0.15em;
+        }
+
+        div.abba {
+            border: 1px solid gray;
+            padding: 0.25em;
+            margin: 0.25em;
+        }
+        
+        div.abba > div:nth-child(2) {
+            background-color: #aaa;
+
+        }
+        div[id]{
+            padding: 0.25em;
+            margin: 0.25em;
+            border: 1px solid #eee;
+        }
+
+
+
+        :target {
+            padding: 1em;
+            background-color: #efefef;
+            border: 1px solid #aaa;
+            transition: all 500ms ease;
+        }
+
+        table {
+            border-collapse: collapse;
+        }
+        table, td {
+            border: 1px solid gray;
+        }
+        th:first-child {
+            border-right: 1px solid gray;
+        }
+
+        td:empty {
+            background-color: #eee;
+        }
+
+        div.ex2 > :not(em) {
+            background-color: #eee;
+        }
+
+        /* write code to disable an input box if a script tag is typed into the input box */
+        /* todo: Write code to change checkboxes on :checked, and input elements on :enabled and :disabled */
+
+
+        /* Pseudo elements of NOTE CSS2.1 */
+        h1::first-letter {
+            color: red;
+        }
+        p::first-line {
+            color: green;
+        }
+        div.beforeNafter::before {
+            content: '»';
+            font-size: 1em;
+            font-size-adjust: 1;
+        }
+
+        div.beforeNafter::after {
+            content: '«';
+            font-size: 1em;
+            font-size-adjust: 1;
+        }
+
+        p::-moz-selection {
+            background-color: green;
+            color: greenyellow;
+        }
+
+        p::selection {
+            background-color: green;
+            color: greenyellow;
+        }
+
+
+
+    </style>
+</head>
+<body>
+
+    <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+    <p>Lorem ipsum dolor sit amet,<br/> consectetur adipiscing elit. </p>
+
+    <div class="abba">
+        <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </div>
+        <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </div>
+        <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </div>
+        <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.   </div>
+    </div>
+
+    <a href="#some_section">Connect to some section</a>
+    <a href="#some_other_section">Connect to some other section</a>
+
+
+
+    <div id="some_section">
+        This is "some_section".
+    </div>
+    <div id="some_other_section">
+        This is "some_other_section".
+    </div>
+
+    <table>
+        <caption>Team Division for Book Review App</caption>
+        <thead>
+        <tr>
+            <th>Topic</th>
+            <th>Candidates</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Front end design and app</td>
+            <td>Jacob</td>
+            <td>Kim</td>
+            <td>Jyotika</td>
+        </tr>
+        <tr>
+            <td>Databases</td>
+            <td>Sindhura</td>
+            <td>Hamid</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>NodeJS and Web Crawlers</td>
+            <td>Shilpa</td>
+            <td></td>
+            <td></td>
+        </tr>
+        </tbody>
+    </table>
+
+    <div class="ex2">
+        <span>Check</span>
+        <em>Check</em>
+        <span>Check</span>
+    </div>
+
+    <div class="beforeNafter">Some data</div>
+
+</body>
+</html>

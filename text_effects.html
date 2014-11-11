@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        body {
+            font: 300 1em 'Helvetica Neue';
+            text-rendering: optimizeLegibility; /* optimizeSpeed, optimizeLegibility */
+        }
+        h1 {
+            font: 600 5em 'Helvetica Neue';
+            margin: 0.5em 2em 0.5em;
+            padding: 0.25em;
+        }
+        h1.letterpress {
+            background-color: #565656;
+            color: #333;
+            text-shadow: 0 1px #777, 0 -1px #000;
+        }
+
+        h1.outlined {
+            -webkit-text-fill-color: white;
+            -webkit-text-stroke: 1px #d1020b; /*Check in chrome*/
+            color: #ff282c;
+            text-shadow: inset 1px 1px 5px blue;
+        }
+
+        .overflow {
+
+             width: 40%;
+            /* apply width */
+             text-overflow: ellipsis;
+            /* todo: change to ellipsis */
+            background-color: #eee;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+
+        .drag {
+            height: 1em;
+            width: 10em;
+            background-color: #eee;
+            resize: both;
+            overflow: hidden;
+        }
+
+        p.ligatures {
+            background-color: #eee;
+            text-indent: 1em;
+            font: 300 2em 'Lucida Console';
+        }
+
+        /* text align */
+
+    </style>
+</head>
+<body>
+    <h1 class="letterpress">Letter Press Effect</h1>
+
+    <h1 class="outlined">Outlined</h1>
+
+    <p class="overflow">There is so much of data in here. I HAVE to 'clip' it up. Or do I?</p>
+    <p class="drag">I can be resized in case I have a lot of data.</p>
+    <p class="ligatures">fi ff fi fl</p>
+
+</body>
+</html>
