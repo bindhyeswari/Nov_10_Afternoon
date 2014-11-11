@@ -8,9 +8,7 @@
             height: 100%;
         }
         body {
-            background-image: url('flower.png');
-            background-position: 100px 100px;
-            background-repeat: no-repeat;
+            background: url(flower.png) 100px 100px no-repeat, url(flower.png) 200px 200px no-repeat;
         }
     </style>
     <script>
@@ -18,7 +16,12 @@
             console.log(document.body.style.backgroundPosition);
             document.body.addEventListener('mousemove', function (event) {
                 console.log(document.body.style.backgroundPosition);
-                document.body.style.backgroundPosition = (event.clientX - 128) + 'px ' + (event.clientY - 128) + 'px';
+
+                var left = event.clientX - 128 + 'px';
+                var top = event.clientY - 128 + 'px';
+
+                document.body.style.background = 'url(flower.png) ' + left + ' ' + top + ' no-repeat, ' +
+                        'url(flower.png) ' + top + ' ' + left + ' no-repeat';
             });
         });
     </script>
